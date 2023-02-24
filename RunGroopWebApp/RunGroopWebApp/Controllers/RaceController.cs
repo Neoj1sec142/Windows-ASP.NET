@@ -63,5 +63,58 @@ namespace RunGroopWebApp.Controllers
 
             return View(raceVm);
         }
+        public async Task<IActionResult> Edit(int id)
+        {
+            var race = await _raceRepository.GetByIdAsync(id);
+            if (race == null) return View("Error");
+            var raceVm = new EditRaceViewModel
+            {
+                Title = race.Title,
+                Description = race.Description,
+                Address = race.Address,
+                AddressId = race.AddressId,
+                URL = race.Image,
+                RaceCategory = race.RaceCategory
+            };
+            return View(raceVm);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, EditRaceViewModel raceVm)
+        {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Failed to edit race");
+                return View("Edit", raceVm);
+            }
+            var userRace = await _raceRepository.GetByIdAsyncNoTracking(id);
+            if (userRace == null)
+            {
+                try
+                {
+                    await _photoService.DeletePhotoAsync(userRace.Image);
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Could not delete photo");
+                    return View(raceVm);
+                }
+                var photoResult = await _photoService.AddPhotoAsync(raceVm.Image);
+                var race = new Race
+                {
+                    Id = id,
+                    Title = raceVm.Title,
+                    Description = raceVm.Description,
+                    Image = photoResult.Url.ToString(),
+                    Address = raceVm.Address,
+                    AddressId = raceVm.AddressId,
+                };
+                _raceRepository.Update(race);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(raceVm);
+            }
+        }
     }
 }

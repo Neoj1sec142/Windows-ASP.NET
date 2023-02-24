@@ -85,3 +85,5 @@ C:\Users\Neib1\OneDrive\Documents\GitHub\Windows-ASP.NET\RunGroopWebApp\RunGroop
 C:\Users\Neib1\OneDrive\Documents\GitHub\Windows-ASP.NET\RunGroopWebApp\RunGroopWebApp\obj\Debug\net6.0\RunGroopWebApp.pdb
 C:\Users\Neib1\OneDrive\Documents\GitHub\Windows-ASP.NET\RunGroopWebApp\RunGroopWebApp\obj\Debug\net6.0\RunGroopWebApp.genruntimeconfig.cache
 C:\Users\Neib1\OneDrive\Documents\GitHub\Windows-ASP.NET\RunGroopWebApp\RunGroopWebApp\obj\Debug\net6.0\ref\RunGroopWebApp.dll
+C:\Users\Neib1\OneDrive\Documents\GitHub\Windows-ASP.NET\RunGroopWebApp\RunGroopWebApp\bin\Debug\net6.0\CloudinaryDotNet.dll
+C:\Users\Neib1\OneDrive\Documents\GitHub\Windows-ASP.NET\RunGroopWebApp\RunGroopWebApp\bin\Debug\net6.0\Newtonsoft.Json.dll

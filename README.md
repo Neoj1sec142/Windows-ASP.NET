@@ -1,7 +1,6 @@
-# Windows-ASP.NET
- Windows ASP.NET Core Development
+# Windows-ASP.NET Notes:
 
-
- Table of Contents:
- []- [FirstApp](--Not In Repo)
- []- [PokemonAPI](--Not In Repo)
+- Models, Views, and Controllers. This pattern helps to achieve separation of concerns: 
+	* The UI logic belongs in the view. 
+	* Input logic belongs in the controller. 
+	* Business logic belongs in the model.

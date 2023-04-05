@@ -8,6 +8,7 @@
 7. [] - [Packaging/Distributing .NET]()       
 8. [] - [Common .NET Types]()       
 9. [] - [Files, Streams, Serialization]()       
+***        
 10. [] - [Working w/Data Enitity FW Core]()       
 11. [] - [LINQ]()       
 12. [] - [Web Dev-ASP.NET Core]()       

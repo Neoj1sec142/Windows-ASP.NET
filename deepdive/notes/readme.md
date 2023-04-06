@@ -9,7 +9,7 @@
 8. [] - [Common .NET Types]()       
 9. [] - [Files, Streams, Serialization]()       
 ***        
-10. [x] - [Working w/Data Enitity FW Core](EntityFWCore.md)       
+10. [x] - [Working w/Data Enitity FW Core](./CH-WORK/EntityFWCore.md)       
 11. [] - [LINQ]()       
 12. [] - [Web Dev-ASP.NET Core]()       
 13. [] - [Websites w/.NET Core Razor Pages]()       

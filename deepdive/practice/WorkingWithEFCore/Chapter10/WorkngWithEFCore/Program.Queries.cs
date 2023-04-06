@@ -84,4 +84,52 @@ partial class Program
             }
         }
     }
+    static void QueryingWithLike()
+    {
+        using (Northwind db = new())
+        {
+            SectionTitle("Pattern matching with LIKE.");
+            Write("Enter parrt of a product name: ");
+            string? input = ReadLine();
+
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                Fail("You did not enter part of a product name.");
+                return; 
+            }
+            IQueryable<Product>? products = db.Products?
+                .Where(p => EF.Functions.Like(p.ProductName, $"%{input}"));
+            if((products is null) || (!products.Any()))
+            {
+                Fail("No products found.");
+                return;
+            }
+            foreach (Product p in products)
+            {
+                WriteLine($"{p.ProductName} has {p.Stock} units in stock. Discontinued: {p.Discontinued}");
+            }
+        }
+    }
+    static void GetRandomProduct()
+    {
+        using(Northwind db = new())
+        {
+            SectionTitle("Get a random prouct");
+            int? rowCount = db.Products?.Count();
+            if(rowCount == null)
+            {
+                Fail("Products table is empty");
+                return;
+            }
+            Product? p = db.Products?.FirstOrDefault(
+                p => p.ProductId == (int)(EF.Functions.Random() * rowCount));
+            if(p == null)
+            {
+                Fail("Product not found"); 
+                return;
+            }
+            WriteLine($"Random product: {p.ProductId} {p.ProductName}");
+            
+        }
+    }
 }

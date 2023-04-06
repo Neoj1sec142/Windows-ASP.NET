@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore; // DbContext, DbContextOptionsBuilder
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Sqlite;
 namespace Packt.Shared;
 // this manages the connection to the database
@@ -16,7 +17,8 @@ public class Northwind : DbContext
         WriteLine($"Connection: {connection}");
         ForegroundColor = previousColor;
         optionsBuilder.UseSqlite(connection);
-        optionsBuilder.LogTo(WriteLine).EnableSensitiveDataLogging();
+        optionsBuilder.LogTo(WriteLine,
+            new[] {RelationalEventId.CommandExecuting}).EnableSensitiveDataLogging();
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -32,6 +34,7 @@ public class Northwind : DbContext
             modelBuilder.Entity<Product>()
             .Property(product => product.Cost)
             .HasConversion<double>();
+            modelBuilder.Entity<Product>().HasQueryFilter(p => !p.Discontinued);
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Neib1\\source\\repos\\ASP.NETCoreApps\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {}
+    "C:\\Users\\Neib1\\OneDrive\\Documents\\GitHub\\Windows-ASP.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Neib1\\source\\repos\\ASP.NETCoreApps\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {
+    "C:\\Users\\Neib1\\OneDrive\\Documents\\GitHub\\Windows-ASP.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Neib1\\source\\repos\\ASP.NETCoreApps\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
+        "projectUniqueName": "C:\\Users\\Neib1\\OneDrive\\Documents\\GitHub\\Windows-ASP.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
         "projectName": "PokemonReviewApp",
-        "projectPath": "C:\\Users\\Neib1\\source\\repos\\ASP.NETCoreApps\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
+        "projectPath": "C:\\Users\\Neib1\\OneDrive\\Documents\\GitHub\\Windows-ASP.NET\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
         "packagesPath": "C:\\Users\\Neib1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Neib1\\source\\repos\\ASP.NETCoreApps\\PokemonReviewApp\\PokemonReviewApp\\obj\\",
+        "outputPath": "C:\\Users\\Neib1\\OneDrive\\Documents\\GitHub\\Windows-ASP.NET\\PokemonReviewApp\\PokemonReviewApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Neib1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
